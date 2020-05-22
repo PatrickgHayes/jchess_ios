@@ -14,6 +14,10 @@
 		EF89C7D1247719980021BA68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF89C7D0247719980021BA68 /* Preview Assets.xcassets */; };
 		EF89C7D4247719980021BA68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF89C7D2247719980021BA68 /* LaunchScreen.storyboard */; };
 		EF89C7DF247719990021BA68 /* jchessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7DE247719990021BA68 /* jchessTests.swift */; };
+		EF89C7EA247725C30021BA68 /* chessboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7E9247725C20021BA68 /* chessboard.swift */; };
+		EF89C7EC24772E320021BA68 /* ChessBoardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7EB24772E320021BA68 /* ChessBoardRow.swift */; };
+		EF89C7EE247730190021BA68 /* ChessBoardPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7ED247730190021BA68 /* ChessBoardPiece.swift */; };
+		EF89C7F0247736E70021BA68 /* CommandCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7EF247736E60021BA68 /* CommandCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		EF89C7DA247719990021BA68 /* jchessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jchessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF89C7DE247719990021BA68 /* jchessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jchessTests.swift; sourceTree = "<group>"; };
 		EF89C7E0247719990021BA68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF89C7E9247725C20021BA68 /* chessboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chessboard.swift; sourceTree = "<group>"; };
+		EF89C7EB24772E320021BA68 /* ChessBoardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardRow.swift; sourceTree = "<group>"; };
+		EF89C7ED247730190021BA68 /* ChessBoardPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardPiece.swift; sourceTree = "<group>"; };
+		EF89C7EF247736E60021BA68 /* CommandCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,10 @@
 				EF89C7C72477198D0021BA68 /* AppDelegate.swift */,
 				EF89C7C92477198D0021BA68 /* SceneDelegate.swift */,
 				EF89C7CB2477198D0021BA68 /* ContentView.swift */,
+				EF89C7EF247736E60021BA68 /* CommandCenter.swift */,
+				EF89C7E9247725C20021BA68 /* chessboard.swift */,
+				EF89C7EB24772E320021BA68 /* ChessBoardRow.swift */,
+				EF89C7ED247730190021BA68 /* ChessBoardPiece.swift */,
 				EF89C7CD247719980021BA68 /* Assets.xcassets */,
 				EF89C7D2247719980021BA68 /* LaunchScreen.storyboard */,
 				EF89C7D5247719980021BA68 /* Info.plist */,
@@ -209,8 +221,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF89C7C82477198D0021BA68 /* AppDelegate.swift in Sources */,
+				EF89C7EA247725C30021BA68 /* chessboard.swift in Sources */,
 				EF89C7CA2477198D0021BA68 /* SceneDelegate.swift in Sources */,
+				EF89C7EC24772E320021BA68 /* ChessBoardRow.swift in Sources */,
+				EF89C7EE247730190021BA68 /* ChessBoardPiece.swift in Sources */,
 				EF89C7CC2477198D0021BA68 /* ContentView.swift in Sources */,
+				EF89C7F0247736E70021BA68 /* CommandCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
