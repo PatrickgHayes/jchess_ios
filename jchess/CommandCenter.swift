@@ -15,9 +15,10 @@ struct CommandCenter: View {
         Form {
             Text("Hello")
             TextField("move r1c1 r8c8", text: $userInput)
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+            Button(action: { print(self.userInput ) } ) {
                 Text(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/)
             }
+            Text(userInput)
         }
     }
 }
