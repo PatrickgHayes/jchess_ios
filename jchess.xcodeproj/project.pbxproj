@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ECA2AF4C247DCF680025510C /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4B247DCF680025510C /* Parser.swift */; };
+		ECA2AF4E247DD0D00025510C /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4D247DD0D00025510C /* Command.swift */; };
+		ECA2AF50247DD3640025510C /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4F247DD3640025510C /* Move.swift */; };
 		EF89C7C82477198D0021BA68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7C72477198D0021BA68 /* AppDelegate.swift */; };
 		EF89C7CA2477198D0021BA68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7C92477198D0021BA68 /* SceneDelegate.swift */; };
 		EF89C7CC2477198D0021BA68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7CB2477198D0021BA68 /* ContentView.swift */; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ECA2AF4B247DCF680025510C /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		ECA2AF4D247DD0D00025510C /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		ECA2AF4F247DD3640025510C /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		EF89C7C42477198D0021BA68 /* jchess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jchess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF89C7C72477198D0021BA68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF89C7C92477198D0021BA68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +135,9 @@
 			children = (
 				EF89C7F2247DBB650021BA68 /* ChessTile.swift */,
 				EF89C7F4247DC5360021BA68 /* ChessBoard.swift */,
+				ECA2AF4B247DCF680025510C /* Parser.swift */,
+				ECA2AF4F247DD3640025510C /* Move.swift */,
+				ECA2AF4D247DD0D00025510C /* Command.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,12 +245,15 @@
 			files = (
 				EF89C7C82477198D0021BA68 /* AppDelegate.swift in Sources */,
 				EF89C7F5247DC5360021BA68 /* ChessBoard.swift in Sources */,
+				ECA2AF4C247DCF680025510C /* Parser.swift in Sources */,
 				EF89C7EA247725C30021BA68 /* chessboard.swift in Sources */,
+				ECA2AF50247DD3640025510C /* Move.swift in Sources */,
 				EF89C7CA2477198D0021BA68 /* SceneDelegate.swift in Sources */,
 				EF89C7EC24772E320021BA68 /* ChessBoardRow.swift in Sources */,
 				EF89C7EE247730190021BA68 /* ChessBoardPiece.swift in Sources */,
 				EF89C7CC2477198D0021BA68 /* ContentView.swift in Sources */,
 				EF89C7F3247DBB660021BA68 /* ChessTile.swift in Sources */,
+				ECA2AF4E247DD0D00025510C /* Command.swift in Sources */,
 				EF89C7F0247736E70021BA68 /* CommandCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
