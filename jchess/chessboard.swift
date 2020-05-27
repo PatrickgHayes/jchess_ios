@@ -9,20 +9,22 @@
 import SwiftUI
 
 struct chessboard: View {
+    @EnvironmentObject private var chessBoard: ChessBoard
+    
     var body: some View {
         ZStack {
             Image("chessboard")
                 .resizable()
                 .frame(width: 300.0, height: 300.0)
             VStack {
-                ChessBoardRow()
-                ChessBoardRow()
-                ChessBoardRow()
-                ChessBoardRow()
-                ChessBoardRow()
-                ChessBoardRow()
-                ChessBoardRow()
-                ChessBoardRow()
+                ChessBoardRow(row: self.chessBoard.board[0])
+                ChessBoardRow(row: self.chessBoard.board[1])
+                ChessBoardRow(row: self.chessBoard.board[2])
+                ChessBoardRow(row: self.chessBoard.board[3])
+                ChessBoardRow(row: self.chessBoard.board[4])
+                ChessBoardRow(row: self.chessBoard.board[5])
+                ChessBoardRow(row: self.chessBoard.board[6])
+                ChessBoardRow(row: self.chessBoard.board[7])
             }
         }
     }
@@ -30,6 +32,6 @@ struct chessboard: View {
 
 struct chessboard_Previews: PreviewProvider {
     static var previews: some View {
-        chessboard()
+        chessboard().environmentObject(ChessBoard())
     }
 }

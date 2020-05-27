@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import SwiftUI
 
-class ChessBoard {
+class ChessBoard: ObservableObject {
     
     let chess_board_size = 8;
-    var board : [[Character]]
+    @Published var board : [[Character]]
     
     init() {
         self.board = [["R","N","B","Q","K","B","N","R"],
