@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC63A417247F062700B089F5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC63A416247F062700B089F5 /* Place.swift */; };
 		ECA2AF4C247DCF680025510C /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4B247DCF680025510C /* Parser.swift */; };
 		ECA2AF4E247DD0D00025510C /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4D247DD0D00025510C /* Command.swift */; };
 		ECA2AF50247DD3640025510C /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4F247DD3640025510C /* Move.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC63A416247F062700B089F5 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		ECA2AF4B247DCF680025510C /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		ECA2AF4D247DD0D00025510C /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		ECA2AF4F247DD3640025510C /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				EF89C7F2247DBB650021BA68 /* ChessTile.swift */,
 				EF89C7F4247DC5360021BA68 /* ChessBoard.swift */,
+				EC63A416247F062700B089F5 /* Place.swift */,
 				ECA2AF4B247DCF680025510C /* Parser.swift */,
 				ECA2AF4F247DD3640025510C /* Move.swift */,
 				ECA2AF4D247DD0D00025510C /* Command.swift */,
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF89C7C82477198D0021BA68 /* AppDelegate.swift in Sources */,
+				EC63A417247F062700B089F5 /* Place.swift in Sources */,
 				EF89C7F5247DC5360021BA68 /* ChessBoard.swift in Sources */,
 				ECA2AF4C247DCF680025510C /* Parser.swift in Sources */,
 				EF89C7EA247725C30021BA68 /* chessboard.swift in Sources */,

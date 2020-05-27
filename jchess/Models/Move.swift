@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Move {
+class Move : Command{
     var chess_board : ChessBoard
     var old_tile : ChessTile
     var new_tile : ChessTile
