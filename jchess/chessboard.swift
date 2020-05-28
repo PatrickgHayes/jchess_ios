@@ -13,7 +13,7 @@ struct chessboard: View {
     
     var body: some View {
         ZStack {
-            Image("chessboard")
+            Image("chessbd")
                 .resizable()
                 .frame(width: 300.0, height: 300.0)
             VStack {

@@ -22,29 +22,29 @@ struct ChessBoardPiece: View {
     func getPieceImage(piece: Character) -> String {
         switch(piece) {
             case "p":
-                return "pawn"
+                return "black p"
             case "P":
-                return "pawn"
+                return "white p"
             case "r":
-                return "pawn"
+                return "black r"
             case "R":
-                return "pawn"
+                return "white r"
             case "n":
-                return "pawn"
+                return "black n"
             case "N":
-                return "pawn"
+                return "white n"
             case "b":
-                return "pawn"
+                return "black b"
             case "B":
-                return "pawn"
+                return "white b"
             case "k":
-                return "pawn"
+                return "black k"
             case "K":
-                return "pawn"
+                return "white k"
             case "q":
-                return "pawn"
+                return "black q"
             case "Q":
-                return "pawn"
+                return "white q"
             case " ":
                 return "pawn"
             default:
