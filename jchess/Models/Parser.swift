@@ -18,7 +18,7 @@ class Parser {
     let chess_board_size = 8
 
     func parse(user_input: String, chessBoard: ChessBoard) throws -> Command {
-        let tokens = user_input.components(separatedBy: ",")
+        let tokens = user_input.components(separatedBy: " ")
 
         switch(tokens[0]) {
             case "move":

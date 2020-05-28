@@ -46,7 +46,7 @@ struct ChessBoardPiece: View {
             case "Q":
                 return "red q"
             case " ":
-                return "pawn"
+                return "transparent"
             default:
                 return "pawn"
         }

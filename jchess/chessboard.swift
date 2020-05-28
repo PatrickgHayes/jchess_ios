@@ -10,22 +10,45 @@ import SwiftUI
 
 struct chessboard: View {
     @EnvironmentObject private var chessBoard: ChessBoard
+    @State var userInput = ""
+    
+    func act(userInput: String) {
+        let parser = Parser()
+        do {
+            let command = try parser.parse(user_input: self.userInput, chessBoard: chessBoard)
+            command.execute()
+            self.userInput = "success"
+            print("success")
+        }
+        catch {
+            self.userInput = error.localizedDescription
+            print(error.localizedDescription)
+        }
+    }
     
     var body: some View {
-        ZStack {
-            Image("chessbd")
-                .resizable()
-                .frame(width: 300.0, height: 300.0)
-            VStack {
-                ChessBoardRow(row: self.chessBoard.board[0])
-                ChessBoardRow(row: self.chessBoard.board[1])
-                ChessBoardRow(row: self.chessBoard.board[2])
-                ChessBoardRow(row: self.chessBoard.board[3])
-                ChessBoardRow(row: self.chessBoard.board[4])
-                ChessBoardRow(row: self.chessBoard.board[5])
-                ChessBoardRow(row: self.chessBoard.board[6])
-                ChessBoardRow(row: self.chessBoard.board[7])
+        VStack {
+            ZStack {
+                Image("chessbd")
+                    .resizable()
+                    .frame(width: 300.0, height: 300.0)
+                VStack {
+                    ChessBoardRow(row: self.chessBoard.board[0])
+                    ChessBoardRow(row: self.chessBoard.board[1])
+                    ChessBoardRow(row: self.chessBoard.board[2])
+                    ChessBoardRow(row: self.chessBoard.board[3])
+                    ChessBoardRow(row: self.chessBoard.board[4])
+                    ChessBoardRow(row: self.chessBoard.board[5])
+                    ChessBoardRow(row: self.chessBoard.board[6])
+                    ChessBoardRow(row: self.chessBoard.board[7])
+                }
             }
+            Text("Hello")
+            TextField("move r1c1 r8c8", text: $userInput)
+            Button(action: { self.act(userInput: self.userInput ) } ) {
+                Text("Button")
+            }
+            Spacer()
         }
     }
 }
