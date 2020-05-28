@@ -17,11 +17,9 @@ struct chessboard: View {
         do {
             let command = try parser.parse(user_input: self.userInput, chessBoard: chessBoard)
             command.execute()
-            self.userInput = "success"
-            print("success")
+            self.userInput = ""
         }
         catch {
-            self.userInput = error.localizedDescription
             print(error.localizedDescription)
         }
     }

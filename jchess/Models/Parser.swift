@@ -21,9 +21,9 @@ class Parser {
         let tokens = user_input.components(separatedBy: " ")
 
         switch(tokens[0]) {
-            case "move":
+            case "Move":
                 return try parseCoordinateMoveCommand(tokens: tokens, chessBoard: chessBoard)
-            case "place":
+            case "Place":
                 //do {
                 return try parseCoordinatePlaceCommand(tokens: tokens, chessBoard: chessBoard);
                 //    }
@@ -72,7 +72,7 @@ class Parser {
         let row = Int(String(tokens[2][index])) ?? -1
         index = tokens[2].index(tokens[2].startIndex, offsetBy: 3)
         let col = Int(String(tokens[2][index])) ?? -1
-        let tile = try ChessTile(row: row, col: col)
+        let tile = try ChessTile(row: row-1, col: col-1)
         return Place(chessBoard: chessBoard, piece: piece, tile: tile)
     }
 }
