@@ -24,27 +24,27 @@ struct ChessBoardPiece: View {
             case "p":
                 return "black p"
             case "P":
-                return "white p"
+                return "red p"
             case "r":
                 return "black r"
             case "R":
-                return "white r"
+                return "red r"
             case "n":
                 return "black n"
             case "N":
-                return "white n"
+                return "red n"
             case "b":
                 return "black b"
             case "B":
-                return "white b"
+                return "red b"
             case "k":
                 return "black k"
             case "K":
-                return "white k"
+                return "red k"
             case "q":
                 return "black q"
             case "Q":
-                return "white q"
+                return "red q"
             case " ":
                 return "pawn"
             default:
