@@ -55,6 +55,6 @@ struct ChessBoardPiece: View {
 
 struct ChessBoardPiece_Previews: PreviewProvider {
     static var previews: some View {
-        ChessBoardPiece(piece: Character("P"))
+        ChessBoardPiece(piece: Character("r"))
     }
 }

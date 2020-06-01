@@ -11,6 +11,7 @@ import SwiftUI
 struct chessboard: View {
     @EnvironmentObject private var chessBoard: ChessBoard
     @State var userInput = ""
+    @State var networkedText = "Thank you to all the mothers out there!"
     
     func act(userInput: String) {
         let parser = Parser()
@@ -45,6 +46,23 @@ struct chessboard: View {
             TextField("move r1c1 r8c8", text: $userInput)
             Button(action: { self.act(userInput: self.userInput ) } ) {
                 Text("Button")
+            }
+            Text(self.networkedText)
+            Button(action: {
+                guard let url = URL(string: "https://itunes.apple.com/search?term=taylor+swift&entity=song") else {
+                    print("Cannot create URL")
+                    return
+                }
+                let task = URLSession.shared.dataTask(with: url) {
+                    (data, URLResponse, Error) in
+                    DispatchQueue.main.async {
+                        let ot = String(decoding: (data ?? "yup".data(using: .utf8))!, as: UTF8.self)
+                        print(ot)
+                        self.networkedText = ot                   }
+                }
+                task.resume()
+            }) {
+                Text("NButton")
             }
             Spacer()
         }
