@@ -49,7 +49,32 @@ struct chessboard: View {
             }
             Text(self.networkedText)
             Button(action: {
-                guard let url = URL(string: "https://itunes.apple.com/search?term=taylor+swift&entity=song") else {
+                let url = NSURL(string: "http://localhost:8080") //Remember to put ATS exception if the URL is not https
+                let request = NSMutableURLRequest(url: url! as URL)
+                //request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") //Optional
+                request.httpMethod = "PUT"
+                let session = URLSession(configuration:URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
+                let data = "First data sent!".data(using: String.Encoding.utf8)
+                request.httpBody = data
+
+                let dataTask = session.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+
+                    if error != nil {
+
+                        //handle error
+                    }
+                    else {
+
+                        let jsonStr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                        print("Parsed JSON: '\(jsonStr)'")
+                        let ot = String(decoding: (data ?? "yup".data(using: .utf8))!, as: UTF8.self)
+                        print(ot)
+                        self.networkedText = ot
+                    }
+                }
+                dataTask.resume()
+                
+                /*guard let url = URL(string: "http://localhost:8080") else {
                     print("Cannot create URL")
                     return
                 }
@@ -60,7 +85,7 @@ struct chessboard: View {
                         print(ot)
                         self.networkedText = ot                   }
                 }
-                task.resume()
+                task.resume()*/
             }) {
                 Text("NButton")
             }
