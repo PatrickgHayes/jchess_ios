@@ -14,6 +14,8 @@ class ChessBoard: ObservableObject {
     let chess_board_size = 8;
     @Published var board : [[Character]]
     
+    var client = ChessClient()
+    
     init() {
         self.board = [["R","N","B","Q","K","B","N","R"],
                             ["P","P","P","P","P","P","P","P"],
@@ -23,6 +25,8 @@ class ChessBoard: ObservableObject {
                             [" "," "," "," "," "," "," "," "],
                             ["p","p","p","p","p","p","p","p"],
                             ["r","n","b","q","k","b","n","r"]]
+        
+        self.client.delegate = self
     }
     
     func getTilePiece(chessTile : ChessTile) -> Character {
@@ -31,5 +35,18 @@ class ChessBoard: ObservableObject {
     
     func setTilePiece(chessTile : ChessTile, piece : Character) {
         board[chessTile.row][chessTile.col] = piece
+    }
+}
+
+extension ChessBoard: ChessClientDelegate {
+    func clientReceivedMessage(text: String) {
+        let parser = Parser()
+        do {
+            let command = try parser.parse(user_input: text, chessBoard: self)
+            command.execute()
+        }
+        catch {
+            print(error.localizedDescription)
+        }
     }
 }

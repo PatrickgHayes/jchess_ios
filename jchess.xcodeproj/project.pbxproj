@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC25180A248AE6EA008834D2 /* ChessClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC251809248AE6EA008834D2 /* ChessClient.swift */; };
 		EC63A417247F062700B089F5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC63A416247F062700B089F5 /* Place.swift */; };
 		ECA2AF4C247DCF680025510C /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4B247DCF680025510C /* Parser.swift */; };
 		ECA2AF4E247DD0D00025510C /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4D247DD0D00025510C /* Command.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC251809248AE6EA008834D2 /* ChessClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessClient.swift; sourceTree = "<group>"; };
 		EC63A416247F062700B089F5 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		ECA2AF4B247DCF680025510C /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		ECA2AF4D247DD0D00025510C /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		EF89C7F1247DBB230021BA68 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EC251809248AE6EA008834D2 /* ChessClient.swift */,
 				EF89C7F2247DBB650021BA68 /* ChessTile.swift */,
 				EF89C7F4247DC5360021BA68 /* ChessBoard.swift */,
 				EC63A416247F062700B089F5 /* Place.swift */,
@@ -256,6 +259,7 @@
 				EF89C7EA247725C30021BA68 /* chessboard.swift in Sources */,
 				EF0256A82489B09200EBC9DD /* WebSocketConnection.swift in Sources */,
 				ECA2AF50247DD3640025510C /* Move.swift in Sources */,
+				EC25180A248AE6EA008834D2 /* ChessClient.swift in Sources */,
 				EF89C7CA2477198D0021BA68 /* SceneDelegate.swift in Sources */,
 				EF89C7EC24772E320021BA68 /* ChessBoardRow.swift in Sources */,
 				EF89C7EE247730190021BA68 /* ChessBoardPiece.swift in Sources */,

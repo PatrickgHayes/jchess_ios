@@ -89,11 +89,6 @@ struct chessboard: View {
             }) {
                 Text("NButton")
             }
-            Button(action: {
-                webSocketConnection.send(text: "Hello")
-            }) {
-                Text("Chat")
-            }
             Spacer()
         }
     }
