@@ -11,7 +11,6 @@ import SwiftUI
 struct chessboard: View {
     @EnvironmentObject private var chessBoard: ChessBoard
     @State var userInput = ""
-    @State var networkedText = "Thank you to all the mothers out there!"
     
     func act(userInput: String) {
         let parser = Parser()
@@ -44,48 +43,14 @@ struct chessboard: View {
             }
             Text("Hello")
             TextField("move r1c1 r8c8", text: $userInput)
-            Button(action: { self.act(userInput: self.userInput ) } ) {
+            Button(action: {
+                self.act(userInput: self.userInput )
+            } ) {
                 Text("Button")
             }
-            Text(self.networkedText)
+            Text(self.chessBoard.testNetworkText)
             Button(action: {
-                let url = NSURL(string: "http://localhost:8080") //Remember to put ATS exception if the URL is not https
-                let request = NSMutableURLRequest(url: url! as URL)
-                //request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") //Optional
-                request.httpMethod = "PUT"
-                let session = URLSession(configuration:URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
-                let data = "First data sent!".data(using: String.Encoding.utf8)
-                request.httpBody = data
-
-                let dataTask = session.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
-
-                    if error != nil {
-
-                        //handle error
-                    }
-                    else {
-
-                        let jsonStr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-                        print("Parsed JSON: '\(jsonStr)'")
-                        let ot = String(decoding: (data ?? "yup".data(using: .utf8))!, as: UTF8.self)
-                        print(ot)
-                        self.networkedText = ot
-                    }
-                }
-                dataTask.resume()
-                
-                /*guard let url = URL(string: "http://localhost:8080") else {
-                    print("Cannot create URL")
-                    return
-                }
-                let task = URLSession.shared.dataTask(with: url) {
-                    (data, URLResponse, Error) in
-                    DispatchQueue.main.async {
-                        let ot = String(decoding: (data ?? "yup".data(using: .utf8))!, as: UTF8.self)
-                        print(ot)
-                        self.networkedText = ot                   }
-                }
-                task.resume()*/
+                self.chessBoard.client.webSocketConnection.send(text: self.chessBoard.testNetworkText)
             }) {
                 Text("NButton")
             }

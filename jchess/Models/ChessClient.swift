@@ -20,10 +20,15 @@ class ChessClient : WebSocketConnectionDelegate {
     init() {
         self.webSocketConnection = WebSocketTaskConnection(url: URL(string: "ws://0.0.0.0:8080/chat")!)
         self.webSocketConnection.delegate = self
+        self.webSocketConnection.connect()
+        self.webSocketConnection.send(text: "ping")
         
     }
     
     func onConnected(connection: WebSocketConnection) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.webSocketConnection.send(text: "ping")
+        }
         print("Connected")
     }
     
@@ -40,9 +45,8 @@ class ChessClient : WebSocketConnectionDelegate {
     }
     
     func onMessage(connection: WebSocketConnection, text: String) {
-        //print("Text message: \(text)")
-        self.delegate?.clientReceivedMessage(text: text)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.delegate?.clientReceivedMessage(text: text)
             self.webSocketConnection.send(text: "ping")
         }
     }
