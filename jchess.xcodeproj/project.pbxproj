@@ -11,6 +11,7 @@
 		ECA2AF4C247DCF680025510C /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4B247DCF680025510C /* Parser.swift */; };
 		ECA2AF4E247DD0D00025510C /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4D247DD0D00025510C /* Command.swift */; };
 		ECA2AF50247DD3640025510C /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4F247DD3640025510C /* Move.swift */; };
+		EF0256A82489B09200EBC9DD /* WebSocketConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0256A72489B09200EBC9DD /* WebSocketConnection.swift */; };
 		EF89C7C82477198D0021BA68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7C72477198D0021BA68 /* AppDelegate.swift */; };
 		EF89C7CA2477198D0021BA68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7C92477198D0021BA68 /* SceneDelegate.swift */; };
 		EF89C7CC2477198D0021BA68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7CB2477198D0021BA68 /* ContentView.swift */; };
@@ -41,6 +42,7 @@
 		ECA2AF4B247DCF680025510C /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		ECA2AF4D247DD0D00025510C /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		ECA2AF4F247DD3640025510C /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		EF0256A72489B09200EBC9DD /* WebSocketConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketConnection.swift; sourceTree = "<group>"; };
 		EF89C7C42477198D0021BA68 /* jchess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jchess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF89C7C72477198D0021BA68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF89C7C92477198D0021BA68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				EF89C7D2247719980021BA68 /* LaunchScreen.storyboard */,
 				EF89C7D5247719980021BA68 /* Info.plist */,
 				EF89C7CF247719980021BA68 /* Preview Content */,
+				EF0256A72489B09200EBC9DD /* WebSocketConnection.swift */,
 			);
 			path = jchess;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				EF89C7F5247DC5360021BA68 /* ChessBoard.swift in Sources */,
 				ECA2AF4C247DCF680025510C /* Parser.swift in Sources */,
 				EF89C7EA247725C30021BA68 /* chessboard.swift in Sources */,
+				EF0256A82489B09200EBC9DD /* WebSocketConnection.swift in Sources */,
 				ECA2AF50247DD3640025510C /* Move.swift in Sources */,
 				EF89C7CA2477198D0021BA68 /* SceneDelegate.swift in Sources */,
 				EF89C7EC24772E320021BA68 /* ChessBoardRow.swift in Sources */,
