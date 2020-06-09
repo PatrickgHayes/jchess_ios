@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
 //    func onConnected(connection: WebSocketConnection) {
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
