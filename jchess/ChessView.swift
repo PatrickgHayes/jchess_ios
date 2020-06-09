@@ -1,5 +1,5 @@
 //
-//  chessboard.swift
+//  ChessView.swift
 //  jchess
 //
 //  Created by Patrick Hayes on 5/21/20.
@@ -8,21 +8,9 @@
 
 import SwiftUI
 
-struct chessboard: View {
+struct ChessView: View {
     @EnvironmentObject private var chessBoard: ChessBoard
     @State var userInput = ""
-    
-    func act(userInput: String) {
-        let parser = Parser()
-        do {
-            let command = try parser.parse(user_input: self.userInput, chessBoard: chessBoard)
-            command.execute()
-            self.userInput = ""
-        }
-        catch {
-            print(error.localizedDescription)
-        }
-    }
     
     var body: some View {
         VStack {
@@ -41,26 +29,20 @@ struct chessboard: View {
                     ChessBoardRow(row: self.chessBoard.board[7])
                 }
             }
-            Text("Hello")
-            TextField("move r1c1 r8c8", text: $userInput)
+            TextField("Enter your command", text: $userInput)
             Button(action: {
-                self.act(userInput: self.userInput )
+                self.chessBoard.executeCommand(userInput: self.userInput)
+                self.chessBoard.sendCommandToServer(userInput: self.userInput)
             } ) {
-                Text("Button")
-            }
-            Text(self.chessBoard.testNetworkText)
-            Button(action: {
-                self.chessBoard.client.webSocketConnection.send(text: self.chessBoard.testNetworkText)
-            }) {
-                Text("NButton")
+                Text("Submit")
             }
             Spacer()
         }
     }
 }
 
-struct chessboard_Previews: PreviewProvider {
+struct ChessView_Previews: PreviewProvider {
     static var previews: some View {
-        chessboard().environmentObject(ChessBoard())
+        ChessView().environmentObject(ChessBoard())
     }
 }

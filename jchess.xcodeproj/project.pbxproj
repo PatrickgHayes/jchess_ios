@@ -20,10 +20,9 @@
 		EF89C7D1247719980021BA68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF89C7D0247719980021BA68 /* Preview Assets.xcassets */; };
 		EF89C7D4247719980021BA68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF89C7D2247719980021BA68 /* LaunchScreen.storyboard */; };
 		EF89C7DF247719990021BA68 /* jchessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7DE247719990021BA68 /* jchessTests.swift */; };
-		EF89C7EA247725C30021BA68 /* chessboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7E9247725C20021BA68 /* chessboard.swift */; };
+		EF89C7EA247725C30021BA68 /* ChessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7E9247725C20021BA68 /* ChessView.swift */; };
 		EF89C7EC24772E320021BA68 /* ChessBoardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7EB24772E320021BA68 /* ChessBoardRow.swift */; };
 		EF89C7EE247730190021BA68 /* ChessBoardPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7ED247730190021BA68 /* ChessBoardPiece.swift */; };
-		EF89C7F0247736E70021BA68 /* CommandCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7EF247736E60021BA68 /* CommandCenter.swift */; };
 		EF89C7F3247DBB660021BA68 /* ChessTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7F2247DBB650021BA68 /* ChessTile.swift */; };
 		EF89C7F5247DC5360021BA68 /* ChessBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7F4247DC5360021BA68 /* ChessBoard.swift */; };
 /* End PBXBuildFile section */
@@ -56,10 +55,9 @@
 		EF89C7DA247719990021BA68 /* jchessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jchessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF89C7DE247719990021BA68 /* jchessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jchessTests.swift; sourceTree = "<group>"; };
 		EF89C7E0247719990021BA68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF89C7E9247725C20021BA68 /* chessboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chessboard.swift; sourceTree = "<group>"; };
+		EF89C7E9247725C20021BA68 /* ChessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessView.swift; sourceTree = "<group>"; };
 		EF89C7EB24772E320021BA68 /* ChessBoardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardRow.swift; sourceTree = "<group>"; };
 		EF89C7ED247730190021BA68 /* ChessBoardPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardPiece.swift; sourceTree = "<group>"; };
-		EF89C7EF247736E60021BA68 /* CommandCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandCenter.swift; sourceTree = "<group>"; };
 		EF89C7F2247DBB650021BA68 /* ChessTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessTile.swift; sourceTree = "<group>"; };
 		EF89C7F4247DC5360021BA68 /* ChessBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,8 +105,7 @@
 				EF89C7C72477198D0021BA68 /* AppDelegate.swift */,
 				EF89C7C92477198D0021BA68 /* SceneDelegate.swift */,
 				EF89C7CB2477198D0021BA68 /* ContentView.swift */,
-				EF89C7EF247736E60021BA68 /* CommandCenter.swift */,
-				EF89C7E9247725C20021BA68 /* chessboard.swift */,
+				EF89C7E9247725C20021BA68 /* ChessView.swift */,
 				EF89C7EB24772E320021BA68 /* ChessBoardRow.swift */,
 				EF89C7ED247730190021BA68 /* ChessBoardPiece.swift */,
 				EF89C7CD247719980021BA68 /* Assets.xcassets */,
@@ -256,7 +253,7 @@
 				EC63A417247F062700B089F5 /* Place.swift in Sources */,
 				EF89C7F5247DC5360021BA68 /* ChessBoard.swift in Sources */,
 				ECA2AF4C247DCF680025510C /* Parser.swift in Sources */,
-				EF89C7EA247725C30021BA68 /* chessboard.swift in Sources */,
+				EF89C7EA247725C30021BA68 /* ChessView.swift in Sources */,
 				EF0256A82489B09200EBC9DD /* WebSocketConnection.swift in Sources */,
 				ECA2AF50247DD3640025510C /* Move.swift in Sources */,
 				EC25180A248AE6EA008834D2 /* ChessClient.swift in Sources */,
@@ -266,7 +263,6 @@
 				EF89C7CC2477198D0021BA68 /* ContentView.swift in Sources */,
 				EF89C7F3247DBB660021BA68 /* ChessTile.swift in Sources */,
 				ECA2AF4E247DD0D00025510C /* Command.swift in Sources */,
-				EF89C7F0247736E70021BA68 /* CommandCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,6 @@ class ChessBoard: ObservableObject {
     
     let chess_board_size = 8;
     @Published var board : [[Character]]
-    @Published var testNetworkText : String
     
     var client = ChessClient()
     
@@ -27,7 +26,6 @@ class ChessBoard: ObservableObject {
                             ["p","p","p","p","p","p","p","p"],
                             ["r","n","b","q","k","b","n","r"]]
         
-        self.testNetworkText = "Ya mother"
         self.client.delegate = self
     }
     
@@ -38,18 +36,26 @@ class ChessBoard: ObservableObject {
     func setTilePiece(chessTile : ChessTile, piece : Character) {
         board[chessTile.row][chessTile.col] = piece
     }
+    
+    func executeCommand(userInput: String) {
+        let parser = Parser()
+        do {
+            let command = try parser.parse(user_input: userInput, chessBoard: self)
+            command.execute()
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func sendCommandToServer(userInput: String) {
+        self.client.webSocketConnection.send(text: userInput)
+    }
 }
+
 
 extension ChessBoard: ChessClientDelegate {
     func clientReceivedMessage(text: String) {
-        self.testNetworkText = text
-//        let parser = Parser()
-//        do {
-//            let command = try parser.parse(user_input: text, chessBoard: self)
-//            command.execute()
-//        }
-//        catch {
-//            print(error.localizedDescription)
-//        }
+        self.executeCommand(userInput: text)
     }
 }
