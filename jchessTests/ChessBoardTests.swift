@@ -48,7 +48,36 @@ class ChessBoardTests: XCTestCase {
     func testSetTilePiece() {
         let chessBoard = ChessBoard()
         XCTAssertEqual(chessBoard.board[0][0], Character("R"))
-        chessBoard.setTilePiece(ChessTile(row: 0, col: 0), Character("Q"))
-        XCTAssertEqual(chessBoard, <#T##expression2: Equatable##Equatable#>)
+        do {
+            try chessBoard.setTilePiece(chessTile: ChessTile(row: 0, col: 0), piece: Character("Q"))
+        } catch {
+            XCTFail()
+        }
+        XCTAssertEqual(chessBoard.board[0][0], Character("Q"))
+        
+        XCTAssertThrowsError(try chessBoard.setTilePiece(chessTile: ChessTile(row: -1, col: 0), piece: Character("Q"))) {
+            error in XCTAssertEqual(error as! ChessTile.ValidationError, ChessTile.ValidationError.outOfBounds)
+        }
+    }
+    
+    func testGetTilePiece() {
+        let chessBoard = ChessBoard()
+        do {
+            let retrievedPiece = try chessBoard.getTilePiece(chessTile: ChessTile(row: 0, col: 0))
+            XCTAssertEqual(retrievedPiece, chessBoard.board[0][0])
+        } catch {
+            XCTFail()
+        }
+        
+        XCTAssertThrowsError(try chessBoard.getTilePiece(chessTile: ChessTile(row: -1, col: 0))) {
+            error in XCTAssertEqual(error as! ChessTile.ValidationError, ChessTile.ValidationError.outOfBounds)
+        }
+    }
+    
+    func testExecuteCommand() {
+        let chessBoard = ChessBoard()
+        let userInput = "Move r2c2 r3c2"
+        chessBoard.executeCommand(userInput: userInput)
+        XCTAssertEqual(chessBoard.getTilePiece(chessTile: try ChessTile(row: 2, col: 1)), Character("P"))
     }
 }
