@@ -27,6 +27,7 @@
 		EF89C7EE247730190021BA68 /* ChessBoardPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7ED247730190021BA68 /* ChessBoardPiece.swift */; };
 		EF89C7F3247DBB660021BA68 /* ChessTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7F2247DBB650021BA68 /* ChessTile.swift */; };
 		EF89C7F5247DC5360021BA68 /* ChessBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89C7F4247DC5360021BA68 /* ChessBoard.swift */; };
+		EFC68DD02498214400D3E48A /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC68DCF2498214300D3E48A /* ParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		EF89C7ED247730190021BA68 /* ChessBoardPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardPiece.swift; sourceTree = "<group>"; };
 		EF89C7F2247DBB650021BA68 /* ChessTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessTile.swift; sourceTree = "<group>"; };
 		EF89C7F4247DC5360021BA68 /* ChessBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoard.swift; sourceTree = "<group>"; };
+		EFC68DCF2498214300D3E48A /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				EF89C7E0247719990021BA68 /* Info.plist */,
 				EF5007882492E07400C0D1C2 /* ChessTileTests.swift */,
 				EF50078A2492E5CE00C0D1C2 /* ChessBoardTests.swift */,
+				EFC68DCF2498214300D3E48A /* ParserTests.swift */,
 			);
 			path = jchessTests;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC68DD02498214400D3E48A /* ParserTests.swift in Sources */,
 				EF5007892492E07400C0D1C2 /* ChessTileTests.swift in Sources */,
 				EF89C7DF247719990021BA68 /* jchessTests.swift in Sources */,
 				EF50078B2492E5CE00C0D1C2 /* ChessBoardTests.swift in Sources */,

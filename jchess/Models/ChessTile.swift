@@ -8,7 +8,15 @@
 
 import Foundation
 
-class ChessTile {
+class ChessTile: Equatable {
+    static func == (lhs: ChessTile, rhs: ChessTile) -> Bool {
+        if lhs.row == rhs.row && lhs.col == rhs.col {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     
     enum ValidationError : Error {
         case outOfBounds
