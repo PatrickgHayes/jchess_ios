@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45A24B1824982CCF00207506 /* MoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A24B1724982CCF00207506 /* MoveTests.swift */; };
+		45A24B1A24982CE000207506 /* PlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A24B1924982CE000207506 /* PlaceTests.swift */; };
 		EC25180A248AE6EA008834D2 /* ChessClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC251809248AE6EA008834D2 /* ChessClient.swift */; };
 		EC63A417247F062700B089F5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC63A416247F062700B089F5 /* Place.swift */; };
 		ECA2AF4C247DCF680025510C /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4B247DCF680025510C /* Parser.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45A24B1724982CCF00207506 /* MoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTests.swift; sourceTree = "<group>"; };
+		45A24B1924982CE000207506 /* PlaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTests.swift; sourceTree = "<group>"; };
 		EC251809248AE6EA008834D2 /* ChessClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessClient.swift; sourceTree = "<group>"; };
 		EC63A416247F062700B089F5 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		ECA2AF4B247DCF680025510C /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				EF5007882492E07400C0D1C2 /* ChessTileTests.swift */,
 				EF50078A2492E5CE00C0D1C2 /* ChessBoardTests.swift */,
 				EFC68DCF2498214300D3E48A /* ParserTests.swift */,
+				45A24B1724982CCF00207506 /* MoveTests.swift */,
+				45A24B1924982CE000207506 /* PlaceTests.swift */,
 			);
 			path = jchessTests;
 			sourceTree = "<group>";
@@ -279,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A24B1824982CCF00207506 /* MoveTests.swift in Sources */,
+				45A24B1A24982CE000207506 /* PlaceTests.swift in Sources */,
 				EFC68DD02498214400D3E48A /* ParserTests.swift in Sources */,
 				EF5007892492E07400C0D1C2 /* ChessTileTests.swift in Sources */,
 				EF89C7DF247719990021BA68 /* jchessTests.swift in Sources */,
