@@ -11,16 +11,18 @@ import SwiftUI
 struct ChessBoardRow: View {
     var row : [Character]
     
+    var id: String
+    
     var body: some View {
         HStack {
-            ChessBoardPiece(piece: row[0])
-            ChessBoardPiece(piece: row[1])
-            ChessBoardPiece(piece: row[2])
-            ChessBoardPiece(piece: row[3])
-            ChessBoardPiece(piece: row[4])
-            ChessBoardPiece(piece: row[5])
-            ChessBoardPiece(piece: row[6])
-            ChessBoardPiece(piece: row[7])
+            ChessBoardPiece(piece: row[0], id: id + "c1")
+            ChessBoardPiece(piece: row[1], id: id + "c2")
+            ChessBoardPiece(piece: row[2], id: id + "c3")
+            ChessBoardPiece(piece: row[3], id: id + "c4")
+            ChessBoardPiece(piece: row[4], id: id + "c5")
+            ChessBoardPiece(piece: row[5], id: id + "c6")
+            ChessBoardPiece(piece: row[6], id: id + "c7")
+            ChessBoardPiece(piece: row[7], id: id + "c8")
         }
     }
 }
@@ -34,6 +36,6 @@ struct ChessBoardRow_Previews: PreviewProvider {
                             Character("P"),
                             Character("P"),
                             Character("P"),
-                            Character("P")])
+                            Character("P")], id: "r1")
     }
 }

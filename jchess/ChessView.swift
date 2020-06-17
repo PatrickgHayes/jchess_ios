@@ -19,14 +19,14 @@ struct ChessView: View {
                     .resizable()
                     .frame(width: 300.0, height: 300.0)
                 VStack {
-                    ChessBoardRow(row: self.chessBoard.board[0])
-                    ChessBoardRow(row: self.chessBoard.board[1])
-                    ChessBoardRow(row: self.chessBoard.board[2])
-                    ChessBoardRow(row: self.chessBoard.board[3])
-                    ChessBoardRow(row: self.chessBoard.board[4])
-                    ChessBoardRow(row: self.chessBoard.board[5])
-                    ChessBoardRow(row: self.chessBoard.board[6])
-                    ChessBoardRow(row: self.chessBoard.board[7])
+                    ChessBoardRow(row: self.chessBoard.board[0], id: "r1")
+                    ChessBoardRow(row: self.chessBoard.board[1], id: "r2")
+                    ChessBoardRow(row: self.chessBoard.board[2], id: "r3")
+                    ChessBoardRow(row: self.chessBoard.board[3], id: "r4")
+                    ChessBoardRow(row: self.chessBoard.board[4], id: "r5")
+                    ChessBoardRow(row: self.chessBoard.board[5], id: "r6")
+                    ChessBoardRow(row: self.chessBoard.board[6], id: "r7")
+                    ChessBoardRow(row: self.chessBoard.board[7], id: "r8")
                 }
             }
             TextField("Enter your command", text: $userInput)

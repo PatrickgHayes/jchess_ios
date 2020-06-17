@@ -11,44 +11,8 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-//    func onConnected(connection: WebSocketConnection) {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//                self.webSocketConnection.send(text: "ping")
-//        }
-//        print("Connected")
-//    }
-//
-//    func onDisconnected(connection: WebSocketConnection, error: Error?) {
-//        if let error = error {
-//                   print("Disconnected with error:\(error)")
-//               } else {
-//                   print("Disconnected normally")
-//               }
-//    }
-//
-//    func onError(connection: WebSocketConnection, error: Error) {
-//        print("Connection error:\(error)")
-//    }
-//
-//    func onMessage(connection: WebSocketConnection, text: String) {
-//        print("Text message: \(text)")
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            self.webSocketConnection.send(text: "ping")
-//        }
-//    }
-//
-//    func onMessage(connection: WebSocketConnection, data: Data) {
-//        print("Data message: \(data)")
-//    }
-//
-//    var webSocketConnection: WebSocketConnection!
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        webSocketConnection = WebSocketTaskConnection(url: URL(string: "ws://0.0.0.0:8080/chat")!)
-//        webSocketConnection.delegate = self
-//        webSocketConnection.connect()
-//        webSocketConnection.send(text: "ping")
         return true
     }
 

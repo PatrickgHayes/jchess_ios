@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45284EA024996A2B006F593C /* jchessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45284E9F24996A2B006F593C /* jchessUITests.swift */; };
+		45284EA824996A65006F593C /* ChessViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45284EA724996A65006F593C /* ChessViewUITests.swift */; };
 		45A24B1824982CCF00207506 /* MoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A24B1724982CCF00207506 /* MoveTests.swift */; };
 		45A24B1A24982CE000207506 /* PlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A24B1924982CE000207506 /* PlaceTests.swift */; };
 		EC25180A248AE6EA008834D2 /* ChessClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC251809248AE6EA008834D2 /* ChessClient.swift */; };
@@ -33,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		45284EA224996A2B006F593C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF89C7BC2477198C0021BA68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF89C7C32477198D0021BA68;
+			remoteInfo = jchess;
+		};
 		EF89C7DB247719990021BA68 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EF89C7BC2477198C0021BA68 /* Project object */;
@@ -43,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45284E9D24996A2A006F593C /* jchessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jchessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45284E9F24996A2B006F593C /* jchessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jchessUITests.swift; sourceTree = "<group>"; };
+		45284EA124996A2B006F593C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45284EA724996A65006F593C /* ChessViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessViewUITests.swift; sourceTree = "<group>"; };
 		45A24B1724982CCF00207506 /* MoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTests.swift; sourceTree = "<group>"; };
 		45A24B1924982CE000207506 /* PlaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTests.swift; sourceTree = "<group>"; };
 		EC251809248AE6EA008834D2 /* ChessClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessClient.swift; sourceTree = "<group>"; };
@@ -73,6 +86,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		45284E9A24996A2A006F593C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF89C7C12477198D0021BA68 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,11 +110,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45284E9E24996A2B006F593C /* jchessUITests */ = {
+			isa = PBXGroup;
+			children = (
+				45284E9F24996A2B006F593C /* jchessUITests.swift */,
+				45284EA124996A2B006F593C /* Info.plist */,
+				45284EA724996A65006F593C /* ChessViewUITests.swift */,
+			);
+			path = jchessUITests;
+			sourceTree = "<group>";
+		};
 		EF89C7BB2477198C0021BA68 = {
 			isa = PBXGroup;
 			children = (
 				EF89C7C62477198D0021BA68 /* jchess */,
 				EF89C7DD247719990021BA68 /* jchessTests */,
+				45284E9E24996A2B006F593C /* jchessUITests */,
 				EF89C7C52477198D0021BA68 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +135,7 @@
 			children = (
 				EF89C7C42477198D0021BA68 /* jchess.app */,
 				EF89C7DA247719990021BA68 /* jchessTests.xctest */,
+				45284E9D24996A2A006F593C /* jchessUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,12 +149,12 @@
 				EF89C7CB2477198D0021BA68 /* ContentView.swift */,
 				EF89C7E9247725C20021BA68 /* ChessView.swift */,
 				EF89C7EB24772E320021BA68 /* ChessBoardRow.swift */,
+				EF0256A72489B09200EBC9DD /* WebSocketConnection.swift */,
 				EF89C7ED247730190021BA68 /* ChessBoardPiece.swift */,
 				EF89C7CD247719980021BA68 /* Assets.xcassets */,
 				EF89C7D2247719980021BA68 /* LaunchScreen.storyboard */,
 				EF89C7D5247719980021BA68 /* Info.plist */,
 				EF89C7CF247719980021BA68 /* Preview Content */,
-				EF0256A72489B09200EBC9DD /* WebSocketConnection.swift */,
 			);
 			path = jchess;
 			sourceTree = "<group>";
@@ -166,6 +198,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		45284E9C24996A2A006F593C /* jchessUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45284EA624996A2B006F593C /* Build configuration list for PBXNativeTarget "jchessUITests" */;
+			buildPhases = (
+				45284E9924996A2A006F593C /* Sources */,
+				45284E9A24996A2A006F593C /* Frameworks */,
+				45284E9B24996A2A006F593C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45284EA324996A2B006F593C /* PBXTargetDependency */,
+			);
+			name = jchessUITests;
+			productName = jchessUITests;
+			productReference = 45284E9D24996A2A006F593C /* jchessUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		EF89C7C32477198D0021BA68 /* jchess */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF89C7E3247719990021BA68 /* Build configuration list for PBXNativeTarget "jchess" */;
@@ -207,10 +257,14 @@
 		EF89C7BC2477198C0021BA68 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Jchess Inc";
 				TargetAttributes = {
+					45284E9C24996A2A006F593C = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = EF89C7C32477198D0021BA68;
+					};
 					EF89C7C32477198D0021BA68 = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -235,11 +289,19 @@
 			targets = (
 				EF89C7C32477198D0021BA68 /* jchess */,
 				EF89C7D9247719990021BA68 /* jchessTests */,
+				45284E9C24996A2A006F593C /* jchessUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		45284E9B24996A2A006F593C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF89C7C22477198D0021BA68 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +322,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		45284E9924996A2A006F593C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45284EA824996A65006F593C /* ChessViewUITests.swift in Sources */,
+				45284EA024996A2B006F593C /* jchessUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF89C7C02477198D0021BA68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,6 +368,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		45284EA324996A2B006F593C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF89C7C32477198D0021BA68 /* jchess */;
+			targetProxy = 45284EA224996A2B006F593C /* PBXContainerItemProxy */;
+		};
 		EF89C7DC247719990021BA68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EF89C7C32477198D0021BA68 /* jchess */;
@@ -316,6 +392,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		45284EA424996A2B006F593C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X73T34YM7N;
+				INFOPLIST_FILE = jchessUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = banana.jchessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = jchess;
+			};
+			name = Debug;
+		};
+		45284EA524996A2B006F593C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X73T34YM7N;
+				INFOPLIST_FILE = jchessUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = banana.jchessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = jchess;
+			};
+			name = Release;
+		};
 		EF89C7E1247719990021BA68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -436,6 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"jchess/Preview Content\"";
+				DEVELOPMENT_TEAM = X73T34YM7N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = jchess/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +572,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"jchess/Preview Content\"";
+				DEVELOPMENT_TEAM = X73T34YM7N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = jchess/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,6 +592,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X73T34YM7N;
 				INFOPLIST_FILE = jchessTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -495,6 +614,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X73T34YM7N;
 				INFOPLIST_FILE = jchessTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -513,6 +633,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		45284EA624996A2B006F593C /* Build configuration list for PBXNativeTarget "jchessUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45284EA424996A2B006F593C /* Debug */,
+				45284EA524996A2B006F593C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EF89C7BF2477198C0021BA68 /* Build configuration list for PBXProject "jchess" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -11,12 +11,15 @@ import SwiftUI
 struct ChessBoardPiece: View {
     var piece : Character
     var pieceImage : String {getPieceImage(piece: piece)}
+    var id: String
     
     var body: some View {
         Image(pieceImage)
             .resizable()
             .frame(width: 20.0, height: 20.0)
             .padding(.all, 5)
+            .accessibility(label: Text(pieceImage))
+            .accessibility(identifier: "chess piece " + id)
     }
     
     func getPieceImage(piece: Character) -> String {
@@ -55,6 +58,6 @@ struct ChessBoardPiece: View {
 
 struct ChessBoardPiece_Previews: PreviewProvider {
     static var previews: some View {
-        ChessBoardPiece(piece: Character("r"))
+        ChessBoardPiece(piece: Character("r"), id: "r1c1")
     }
 }
