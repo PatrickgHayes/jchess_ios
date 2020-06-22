@@ -18,7 +18,7 @@ class ChessClient : WebSocketConnectionDelegate {
     var delegate: ChessClientDelegate?
     
     init() {
-        self.webSocketConnection = WebSocketTaskConnection(url: URL(string: "ws://0.0.0.0:8080/chess")!)
+        self.webSocketConnection = WebSocketTaskConnection(url: URL(string: "ws://0.0.0.0:8081/chess")!)
         self.webSocketConnection.delegate = self
         self.webSocketConnection.connect()
         

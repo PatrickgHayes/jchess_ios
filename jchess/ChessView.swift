@@ -11,6 +11,7 @@ import SwiftUI
 struct ChessView: View {
     @EnvironmentObject private var chessBoard: ChessBoard
     @State var userInput = ""
+    @State var secretImage = "lock"
     
     var body: some View {
         VStack {
@@ -35,6 +36,20 @@ struct ChessView: View {
                 self.chessBoard.sendCommandToServer(userInput: self.userInput)
             } ) {
                 Text("Submit")
+            }
+            Image(secretImage)
+            .resizable()
+            .frame(width: 100.0, height: 100.0)
+            Button(action: {
+                let url = URL(string: "http://localhost:8081/secret")!
+                let task = URLSession.shared.dataTask(with: url) {
+                    (data, response, error) in
+                    guard let data = data else { return }
+                    self.secretImage = String(data: data, encoding: .utf8)!
+                }
+                task.resume()
+            }) {
+                Text("Secret")
             }
             Spacer()
         }
