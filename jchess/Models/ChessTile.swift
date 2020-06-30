@@ -38,31 +38,31 @@ class ChessTile: Equatable {
     static func getChessTileImage(piece: Character) -> String {
         switch(piece) {
             case "p":
-                return "black p"
+                return "black p new"
             case "P":
-                return "red p"
+                return "red p new"
             case "r":
-                return "black r"
+                return "black r new"
             case "R":
-                return "red r"
+                return "red r new"
             case "n":
-                return "black n"
+                return "black n new"
             case "N":
-                return "red n"
+                return "red n new"
             case "b":
-                return "black b"
+                return "black b new"
             case "B":
-                return "red b"
+                return "red b new"
             case "k":
-                return "black k"
+                return "black k new"
             case "K":
-                return "red k"
+                return "red k new"
             case "q":
-                return "black q"
+                return "black q new"
             case "Q":
-                return "red q"
+                return "red q new"
             case " ":
-                return "transparent"
+                return "transparent new"
             default:
                 return "pawn"
         }

@@ -15,6 +15,7 @@
 		ECA2AF4C247DCF680025510C /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4B247DCF680025510C /* Parser.swift */; };
 		ECA2AF4E247DD0D00025510C /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4D247DD0D00025510C /* Command.swift */; };
 		ECA2AF50247DD3640025510C /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA2AF4F247DD3640025510C /* Move.swift */; };
+		ECB3380A24ABC35F00FC5D3B /* ChessBoardAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3380924ABC35F00FC5D3B /* ChessBoardAsset.swift */; };
 		EF0256A82489B09200EBC9DD /* WebSocketConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0256A72489B09200EBC9DD /* WebSocketConnection.swift */; };
 		EF5007892492E07400C0D1C2 /* ChessTileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5007882492E07400C0D1C2 /* ChessTileTests.swift */; };
 		EF50078B2492E5CE00C0D1C2 /* ChessBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF50078A2492E5CE00C0D1C2 /* ChessBoardTests.swift */; };
@@ -63,6 +64,7 @@
 		ECA2AF4B247DCF680025510C /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		ECA2AF4D247DD0D00025510C /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		ECA2AF4F247DD3640025510C /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		ECB3380924ABC35F00FC5D3B /* ChessBoardAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardAsset.swift; sourceTree = "<group>"; };
 		EF0256A72489B09200EBC9DD /* WebSocketConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketConnection.swift; sourceTree = "<group>"; };
 		EF5007882492E07400C0D1C2 /* ChessTileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessTileTests.swift; sourceTree = "<group>"; };
 		EF50078A2492E5CE00C0D1C2 /* ChessBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardTests.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				EFC68DDF249AB32200D3E48A /* Networking */,
 				EF89C7F1247DBB230021BA68 /* Models */,
 				EF89C7C72477198D0021BA68 /* AppDelegate.swift */,
+				ECB3380924ABC35F00FC5D3B /* ChessBoardAsset.swift */,
 				EF89C7C92477198D0021BA68 /* SceneDelegate.swift */,
 				EF89C7CB2477198D0021BA68 /* ContentView.swift */,
 				EF89C7E9247725C20021BA68 /* ChessView.swift */,
@@ -360,6 +363,7 @@
 				EF89C7EE247730190021BA68 /* ChessBoardPiece.swift in Sources */,
 				EF89C7CC2477198D0021BA68 /* ContentView.swift in Sources */,
 				EF89C7F3247DBB660021BA68 /* ChessTile.swift in Sources */,
+				ECB3380A24ABC35F00FC5D3B /* ChessBoardAsset.swift in Sources */,
 				ECA2AF4E247DD0D00025510C /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
