@@ -12,23 +12,20 @@ struct ChessView: View {
     @EnvironmentObject private var chessBoard: ChessBoard
     @State var userInput = ""
     @State var secretImage = "lock"
+    var c1 = Color.green
+    var c2 = Color.yellow
     
     var body: some View {
         VStack {
-            ZStack {
-                Image("chessbd")
-                    .resizable()
-                    .frame(width: 300.0, height: 300.0)
-                VStack {
-                    ChessBoardRow(row: self.chessBoard.board[0], id: "r1")
-                    ChessBoardRow(row: self.chessBoard.board[1], id: "r2")
-                    ChessBoardRow(row: self.chessBoard.board[2], id: "r3")
-                    ChessBoardRow(row: self.chessBoard.board[3], id: "r4")
-                    ChessBoardRow(row: self.chessBoard.board[4], id: "r5")
-                    ChessBoardRow(row: self.chessBoard.board[5], id: "r6")
-                    ChessBoardRow(row: self.chessBoard.board[6], id: "r7")
-                    ChessBoardRow(row: self.chessBoard.board[7], id: "r8")
-                }
+            VStack (spacing: 0){
+                ChessBoardRow(row: self.chessBoard.board[0], id: "r1", colors: [c1, c2, c1, c2, c1, c2, c1, c2])
+                ChessBoardRow(row: self.chessBoard.board[1], id: "r2", colors: [c2, c1, c2, c1, c2, c1, c2, c1])
+                ChessBoardRow(row: self.chessBoard.board[2], id: "r3", colors: [c1, c2, c1, c2, c1, c2, c1, c2])
+                ChessBoardRow(row: self.chessBoard.board[3], id: "r4", colors: [c2, c1, c2, c1, c2, c1, c2, c1])
+                ChessBoardRow(row: self.chessBoard.board[4], id: "r5", colors: [c1, c2, c1, c2, c1, c2, c1, c2])
+                ChessBoardRow(row: self.chessBoard.board[5], id: "r6", colors: [c2, c1, c2, c1, c2, c1, c2, c1])
+                ChessBoardRow(row: self.chessBoard.board[6], id: "r7", colors: [c1, c2, c1, c2, c1, c2, c1, c2])
+                ChessBoardRow(row: self.chessBoard.board[7], id: "r8", colors: [c2, c1, c2, c1, c2, c1, c2, c1])
             }
             TextField("Enter your command", text: $userInput)
             Button(action: {
