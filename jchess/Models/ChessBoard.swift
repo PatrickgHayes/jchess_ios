@@ -13,6 +13,8 @@ class ChessBoard: ObservableObject {
     
     let chess_board_size = 8;
     @Published var board : [[Character]]
+    @Published var tileFrom: String = ""
+    @Published var tileTo: String = ""
     
     var client = ChessClient()
     

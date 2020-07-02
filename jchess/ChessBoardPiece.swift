@@ -14,28 +14,33 @@ struct ChessBoardPiece: View {
     var id: String
     var color: Color
     
-    @GestureState private var dragOffset = CGSize.zero
-    @State private var position = CGSize.zero
+    @EnvironmentObject private var chessBoard: ChessBoard
     
     var body: some View {
         ZStack (alignment: .center) {
             Rectangle()
-                .fill(color)
+                .fill(self.color)
                 .aspectRatio(1.0, contentMode: .fit)
-            Image(pieceImage)
+            Image(self.pieceImage)
                 .resizable()
-                .frame(alignment: .bottom)
+                .frame(width: 30, height: 30)
+                .padding(.top, 10)
                 .aspectRatio(1.0, contentMode: .fit)
-                .accessibility(label: Text(pieceImage))
-                .accessibility(identifier: "chess piece " + id)
-        }
-    }
-    func lockValue(val: Int) -> Int{
-        let mod = val % 38
-        if mod > 19 {
-            return val + (38 - mod)
-        } else {
-            return val - mod
+                .accessibility(label: Text(self.pieceImage))
+                .accessibility(identifier: "chess piece " + self.id)
+            .gesture(
+                TapGesture()
+                    .onEnded{
+                        if (self.chessBoard.tileFrom == "") {
+                            self.chessBoard.tileFrom = self.id
+                        } else  if (self.chessBoard.tileTo == "") {
+                            self.chessBoard.tileTo = self.id
+                            self.chessBoard.executeCommand(userInput: "Move " + self.chessBoard.tileFrom + " " + self.chessBoard.tileTo)
+                            self.chessBoard.sendCommandToServer(userInput: "Move " + self.chessBoard.tileFrom + " " + self.chessBoard.tileTo)
+                            self.chessBoard.tileFrom = ""
+                            self.chessBoard.tileTo = ""
+                        }
+                    })
         }
     }
 }
